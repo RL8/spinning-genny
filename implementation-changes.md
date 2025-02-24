@@ -486,3 +486,76 @@ Files affected:
 ### References
 - Original specifications from companion files
 - Integration with previously implemented GitHub API functions
+
+## 15. Environment Configuration Setup
+**Date**: 2025-02-24
+**Time**: 06:41 UTC
+
+### Original State
+Environment configuration was pending with OAuth credentials needed.
+
+### Changes Made
+1. Created GitHub OAuth Application:
+   - Name: "Spinning Genny"
+   - Homepage URL: http://localhost:5173
+   - Callback URL: http://localhost:5173/auth/callback
+
+2. Set up environment variables:
+   - Verified `.env.example` has all required variables
+   - Created `.env` with GitHub OAuth credentials
+   - Configured development server URL
+
+### Rationale
+Environment setup is crucial for:
+- GitHub OAuth authentication
+- Local development configuration
+- Secure credential management
+
+### Impact
+Files affected:
+- `.env` (new, gitignored)
+- Environment variables configured:
+  - GITHUB_CLIENT_ID
+  - GITHUB_CLIENT_SECRET
+  - PUBLIC_URL
+
+### References
+- GitHub OAuth application settings
+- Original specifications for authentication flow
+
+## 16. Authentication Routes Implementation
+**Date**: 2025-02-24
+**Time**: 06:47 UTC
+
+### Original State
+Authentication routes were pending implementation.
+
+### Changes Made
+1. Created `/auth/+server.ts`:
+   - Implements GET endpoint for initiating GitHub OAuth flow
+   - Uses `getGitHubAuthUrl` for redirect URL generation
+   - Includes logging for auth flow initiation
+
+2. Created `/auth/callback/+server.ts`:
+   - Implements OAuth callback handling
+   - Exchanges auth code for GitHub token
+   - Sets secure HTTP-only cookie with token
+   - Includes error handling and logging
+   - Redirects to home page on success
+
+### Rationale
+These routes are essential for:
+- Initiating the GitHub OAuth flow
+- Handling OAuth callbacks securely
+- Managing user sessions via cookies
+- Providing proper error handling
+
+### Impact
+Files affected:
+- `src/routes/auth/+server.ts` (new)
+- `src/routes/auth/callback/+server.ts` (new)
+
+### References
+- GitHub OAuth documentation
+- Original specifications for auth flow
+- Integration with previously implemented auth utilities

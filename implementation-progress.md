@@ -88,13 +88,16 @@ Config:
 
 Routes:
 - [x] Main routes implemented
+- [x] Auth routes implemented
+  - [x] /auth for GitHub OAuth initiation
+  - [x] /auth/callback for handling OAuth response
 - [ ] Additional routes if any
 - [ ] Verify all routes match specifications
 
 ### 7. Set up Environment 
 - [x] .env.example file exists
-- [ ] Verify .env.example contains correct variables
-- [ ] Create .env with GitHub OAuth credentials
+- [x] Verify .env.example contains correct variables
+- [x] Create .env with GitHub OAuth credentials
 
 ### 8. Verify Setup 
 - [ ] Run TypeScript check
