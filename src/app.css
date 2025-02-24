@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-swift-purple/10 to-swift-gold/10 min-h-screen;
+  }
+}
+
+@layer components {
+  .progress-step {
+    @apply flex items-center text-sm text-gray-600;
+  }
+  
+  .progress-step.active {
+    @apply text-swift-purple font-medium;
+  }
+  
+  .progress-step.completed {
+    @apply text-green-600;
+  }
+  
+  .progress-step.error {
+    @apply text-red-600;
+  }
+}
