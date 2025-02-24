@@ -64,8 +64,8 @@ Components:
   - [ ] Additional components if any
 
 Server code:
-- [ ] Copy server code to src/lib/server/
-  - [ ] github.ts
+- [x] Copy server code to src/lib/server/
+  - [x] github.ts
   - [ ] Additional server files if any
 
 Types:
@@ -78,6 +78,11 @@ Utils:
 - [x] Copy utility files to src/lib/utils/
   - [x] validation.ts
   - [ ] Additional utility files if any
+
+Config:
+- [x] Create config directory
+- [x] Add constants.ts
+- [ ] Add other config files if needed
 
 Routes:
 - [x] Main routes implemented
