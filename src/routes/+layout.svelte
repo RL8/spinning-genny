@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>Swiftie App Generator</title>
+  <title>Spinning Genny</title>
 </svelte:head>
 
 <div class="min-h-screen">
