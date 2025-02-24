@@ -66,6 +66,8 @@ Components:
 Server code:
 - [x] Copy server code to src/lib/server/
   - [x] github.ts
+  - [x] generator.ts
+  - [x] auth.ts
   - [ ] Additional server files if any
 
 Types:
